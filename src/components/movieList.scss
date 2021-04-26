@@ -1,0 +1,39 @@
+@import "../sass/main.scss";
+
+.container {
+   display: flex;
+   flex-direction: column;
+   width: 25rem;
+   margin: 2rem;
+   border-radius: 2rem;
+   text-decoration: none;
+   transition: all 0.2s;
+   box-shadow: 0 1rem 3rem rgba(#000, 0.3);
+   &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 1rem 3rem rgba(#000, 0.8);
+   }
+}
+
+.image {
+   img {
+      width: 100%;
+   }
+}
+
+.title {
+   padding: 1.5rem;
+   text-align: center;
+   font-size: 0.8rem;
+   font-weight: 100;
+   color: grey;
+}
+
+// Movie list component
+.main-list {
+   width: 80vw;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-left: 20vw;
+}
