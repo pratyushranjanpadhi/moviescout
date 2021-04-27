@@ -1,0 +1,12 @@
+movieList : 
+    movies : []
+    loading : true/false
+movieDetails :
+    movie : {}
+    loading : true/false
+personDetails : 
+    person : {}
+    loading : true/false
+genreDetails : 
+    genre : []
+    loading : true/false

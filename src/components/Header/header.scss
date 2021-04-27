@@ -1,0 +1,12 @@
+@import "../../sass/main.scss";
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 7rem;
+   width: 100vw;
+   background-color: $color-fourth;
+   z-index: 1;
+   display: flex;
+}

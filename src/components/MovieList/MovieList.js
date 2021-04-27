@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./movieList.scss";
 
-import { getMoviesList } from "../actions/moviesActions";
+import { getMoviesList } from "../../actions/moviesActions";
 
 const MovieList = () => {
    // const [movies, setMovies] = useState([]);

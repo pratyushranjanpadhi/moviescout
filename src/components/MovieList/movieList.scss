@@ -1,17 +1,24 @@
-@import "../sass/main.scss";
+@import "../../sass/main.scss";
 
+.main-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-left: 25rem;
+   margin-top: 10rem;
+}
 .container {
    display: flex;
    flex-direction: column;
-   width: 25rem;
+   width: 23rem;
    margin: 2rem;
    border-radius: 2rem;
    text-decoration: none;
    transition: all 0.2s;
-   box-shadow: 0 1rem 3rem rgba(#000, 0.3);
+   box-shadow: 0 0.5rem 1.5rem rgba(#000, 0.3);
    &:hover {
       transform: scale(1.05);
-      box-shadow: 0 1rem 3rem rgba(#000, 0.8);
+      box-shadow: 0 1rem 3rem rgba(#000, 0.6);
    }
 }
 
@@ -26,14 +33,5 @@
    text-align: center;
    font-size: 0.8rem;
    font-weight: 100;
-   color: grey;
-}
-
-// Movie list component
-.main-list {
-   width: 80vw;
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin-left: 20vw;
+   color: $color-first;
 }
