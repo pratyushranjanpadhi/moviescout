@@ -20,25 +20,36 @@
    &__inside {
       width: 70%;
       font-size: 1.2rem;
-      margin-left: 4rem;
       text-align: left;
       padding: 0.7rem 1.2rem;
+      padding-left: 3rem;
       cursor: pointer;
       color: $color-third;
       background-color: transparent;
-      border: none;
-      border-radius: 10rem;
+      border: 1px solid transparent;
+      border-radius: 1000rem;
+      transition: all 0.1s;
       &:hover {
-         background-color: $color-fourth;
+         border: 1px solid $color-third;
+         // transform: translateY(-0.5rem) scale(1.05);
          color: $color-third;
+      }
+
+      &:focus {
+         border: none;
       }
    }
    &__heading {
       align-self: flex-start;
       margin-left: 4rem;
       padding: 1rem 0;
-      color: $color-third;
+      color: $color-second;
       text-transform: uppercase;
       font-weight: 700;
    }
+}
+
+.active {
+   border: 1px solid $color-third;
+   border-radius: 1000rem;
 }

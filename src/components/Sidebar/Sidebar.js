@@ -1,23 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./sidebar.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { getGenreList } from "../../actions/genreActions";
+import { getMoviesList } from "../../actions/moviesActions";
 import { genres } from "./genres";
 
 const Sidebar = () => {
-   // const dispatch = useDispatch();
-   // const genreList = useSelector((state) => state.genreList);
-   // const { genres } = genreList;
-   // useEffect(() => {
-   //    dispatch(getGenreList());
-   // }, [dispatch]);
+   const dispatch = useDispatch();
+
+   const clickHandler = (id) => {
+      dispatch(getMoviesList(id));
+   };
 
    const renderGenres = () => {
       return genres.map((genre) => {
-         console.log(genre.name);
          return (
-            <button key={genre.id} className="sidebar__inside">
+            <button onClick={() => clickHandler(genre.id)} key={genre.id} className="sidebar__inside">
                {genre.name}
             </button>
          );

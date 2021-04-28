@@ -15,10 +15,10 @@
    border-radius: 2rem;
    text-decoration: none;
    transition: all 0.2s;
-   box-shadow: 0 0.5rem 1.5rem rgba(#000, 0.3);
+   box-shadow: 0 0.5rem 1.5rem rgba($color-first, 0.3);
    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 1rem 3rem rgba(#000, 0.6);
+      transform: translateY(-1rem) scale(1.05);
+      box-shadow: 0 1rem 3rem rgba($color-first, 0.6);
    }
 }
 

@@ -5,13 +5,13 @@ import "./movieList.scss";
 
 import { getMoviesList } from "../../actions/moviesActions";
 
+import Loader from "../Loader/Loader";
+
 const MovieList = () => {
-   // const [movies, setMovies] = useState([]);
-
    const dispatch = useDispatch();
-   // const movies = [];
 
-   const { movies } = useSelector((state) => state.movieList);
+   const movieList = useSelector((state) => state.movieList);
+   const { movies, loading } = movieList;
 
    useEffect(() => {
       dispatch(getMoviesList());
@@ -31,7 +31,7 @@ const MovieList = () => {
          );
       });
    };
-   return <div className="main-list">{renderMovies()}</div>;
+   return <div className="main-list">{loading ? <Loader /> : renderMovies()}</div>;
 };
 
 export default MovieList;
