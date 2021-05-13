@@ -6,16 +6,28 @@ import "./movieList.scss";
 import { getMoviesList } from "../../actions/moviesActions";
 
 import Loader from "../Loader/Loader";
+import { genres } from "../../components/Sidebar/genres";
 
-const MovieList = () => {
+const MovieList = ({ genre }) => {
    const dispatch = useDispatch();
+   let genreId;
+
+   if (genre) {
+      const { id } = genres.find((item) => item.name === genre);
+      genreId = id;
+   }
 
    const movieList = useSelector((state) => state.movieList);
    const { movies, loading } = movieList;
+   console.log(movies);
 
    useEffect(() => {
-      dispatch(getMoviesList());
-   }, [dispatch]);
+      if (genreId) {
+         dispatch(getMoviesList(genreId));
+      } else {
+         dispatch(getMoviesList());
+      }
+   }, [dispatch, genreId]);
 
    const renderMovies = () => {
       return movies.map((movie) => {

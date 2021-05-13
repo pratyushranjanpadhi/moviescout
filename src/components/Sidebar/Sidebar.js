@@ -1,29 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./sidebar.scss";
-import { useDispatch } from "react-redux";
 
-import { getMoviesList } from "../../actions/moviesActions";
 import { genres } from "./genres";
 
-const Sidebar = () => {
-   const dispatch = useDispatch();
-
-   const clickHandler = (id) => {
-      dispatch(getMoviesList(id));
-   };
-
+const Sidebar = ({ genreName }) => {
    const renderGenres = () => {
       return genres.map((genre) => {
          return (
-            <button onClick={() => clickHandler(genre.id)} key={genre.id} className="sidebar__inside">
+            <Link to={`/movies/${genre.name}`} key={genre.id} className={`sidebar__inside ${genre.name === genreName ? "active" : ""}`}>
                {genre.name}
-            </button>
+            </Link>
          );
       });
    };
    return (
       <div className="sidebar">
-         <div className="sidebar__logo">M</div>
+         <Link to="/" className="sidebar__logo">
+            M
+         </Link>
          <h3 className="sidebar__heading">Genres</h3>
          {renderGenres()}
       </div>

@@ -1,7 +1,14 @@
 import React from "react";
+import MovieDetails from "../components/MovieDetails/MovieDetails";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const MovieScreen = ({ match }) => {
-   return <div>{match.params.id}</div>;
+   return (
+      <div>
+         <Sidebar genreName="Action" />
+         <MovieDetails id={match.params.id} />{" "}
+      </div>
+   );
 };
 
 export default MovieScreen;

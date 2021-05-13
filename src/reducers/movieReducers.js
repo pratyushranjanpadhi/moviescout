@@ -10,4 +10,16 @@ const movieListReducer = (state = { movies: [] }, action) => {
    }
 };
 
-export { movieListReducer };
+const movieDetailsReducer = (state = { movie: {} }, action) => {
+   switch (action.type) {
+      case "FETCH_MOVIE_DETAILS_REQUEST":
+         return { ...state, loading: true };
+      case "FETCH_MOVIE_DETAILS_SUCCESS":
+         return { ...state, loading: false, movie: action.payload };
+
+      default:
+         return state;
+   }
+};
+
+export { movieListReducer, movieDetailsReducer };

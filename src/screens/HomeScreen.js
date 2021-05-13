@@ -4,12 +4,12 @@ import MovieList from "../components/MovieList/MovieList";
 import Sidebar from "../components/Sidebar/Sidebar";
 // import Header from "../components/Header/Header";
 
-const HomeScreen = () => {
+const HomeScreen = ({ match }) => {
    return (
       <>
          {/* <Header /> */}
-         <Sidebar />
-         <MovieList />
+         <Sidebar genreName={match.params.genre} />
+         <MovieList genre={match.params.genre} />
       </>
    );
 };

@@ -9,6 +9,7 @@ const App = () => {
       <Router>
          <Route path="/" exact component={HomeScreen} />
          <Route path="/movie/:id" component={MovieScreen} />
+         <Route path="/movies/:genre" component={HomeScreen} />
       </Router>
    );
 };

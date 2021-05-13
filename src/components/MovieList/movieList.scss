@@ -17,7 +17,7 @@
    transition: all 0.2s;
    box-shadow: 0 0.5rem 1.5rem rgba($color-first, 0.3);
    &:hover {
-      transform: translateY(-1rem) scale(1.05);
+      transform: translateY(-0.5rem) scale(1.01);
       box-shadow: 0 1rem 3rem rgba($color-first, 0.6);
    }
 }
