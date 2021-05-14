@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../Loader/Loader";
 import "./movieDetails.scss";
 import { getMovieDetails } from "../../actions/moviesActions";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
+import { FaImdb, FaLink } from "react-icons/fa";
+import CastList from "../CastList/CastList";
 
 const MovieDetails = ({ id }) => {
-   const [delay, setDelay] = useState(true);
    const dispatch = useDispatch();
 
    const movieDetails = useSelector((state) => state.movieDetails);
@@ -15,15 +16,12 @@ const MovieDetails = ({ id }) => {
 
    useEffect(() => {
       dispatch(getMovieDetails(id));
-      setTimeout(() => {
-         setDelay(false);
-      }, 3000);
    }, [dispatch, id]);
 
    const renderGenres = (genres) => {
       return genres.map((genre) => {
          return (
-            <Link to={`/movies/${genre.name}`} className="details__genrebox">
+            <Link key={genre.id} to={`/movies/${genre.name}`} className="details__genrebox">
                {genre.name}
             </Link>
          );
@@ -65,14 +63,17 @@ const MovieDetails = ({ id }) => {
                      <p>{movie.overview}</p>
                   </div>
                   <div className="details__linkbox">
-                     <a href={`https://www.imdb.com/title/${movie.imdb_id}/`} target="_blank" className="details__imdblink">
+                     <a href={`https://www.imdb.com/title/${movie.imdb_id}/`} rel="noreferrer" target="_blank" className="details__imdblink">
+                        <FaImdb className="details__imdblink--icon" />
                         IMDB
                      </a>
-                     <a href={`${movie.homepage}`} target="_blank" className="details__imdblink">
+                     <a href={`${movie.homepage}`} target="_blank" rel="noreferrer" className="details__imdblink">
+                        <FaLink className="details__imdblink--icon" />
                         Website
                      </a>
                   </div>
                </div>
+               <CastList id={id} />
             </div>
          )}
       </>

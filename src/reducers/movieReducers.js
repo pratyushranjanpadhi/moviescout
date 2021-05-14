@@ -10,7 +10,7 @@ const movieListReducer = (state = { movies: [] }, action) => {
    }
 };
 
-const movieDetailsReducer = (state = { movie: {} }, action) => {
+const movieDetailsReducer = (state = { movie: { genres: [] } }, action) => {
    switch (action.type) {
       case "FETCH_MOVIE_DETAILS_REQUEST":
          return { ...state, loading: true };

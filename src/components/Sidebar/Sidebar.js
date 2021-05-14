@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.scss";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 import { genres } from "./genres";
 
@@ -9,6 +10,7 @@ const Sidebar = ({ genreName }) => {
       return genres.map((genre) => {
          return (
             <Link to={`/movies/${genre.name}`} key={genre.id} className={`sidebar__inside ${genre.name === genreName ? "active" : ""}`}>
+               <AiFillPlayCircle className="sidebar__inside--icon" />
                {genre.name}
             </Link>
          );
