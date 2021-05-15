@@ -22,4 +22,15 @@ const movieDetailsReducer = (state = { movie: { genres: [] } }, action) => {
    }
 };
 
-export { movieListReducer, movieDetailsReducer };
+const movieVideoReducer = (state = { videos: [] }, action) => {
+   switch (action.type) {
+      case "FETCH_MOVIE_VIDEO_REQUEST":
+         return { ...state, loading: true };
+      case "FETCH_MOVIE_VIDEO_SUCCESS":
+         return { ...state, loading: false, videos: action.payload };
+      default:
+         return state;
+   }
+};
+
+export { movieListReducer, movieDetailsReducer, movieVideoReducer };

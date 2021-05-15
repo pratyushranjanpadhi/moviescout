@@ -1,15 +1,14 @@
 @import "../../sass/variables";
 .slider-box {
    padding: 2rem;
+   // padding-top: 0;
    width: 70%;
-   margin-top: -4rem;
-   margin-bottom: 10rem;
 }
 .slider-heading {
    font-size: 2rem;
    font-weight: 700;
    text-transform: uppercase;
-   margin-bottom: 1.5rem;
+   margin-bottom: 2.5rem;
 }
 .slider {
    width: 100%;
@@ -30,7 +29,7 @@
       object-fit: cover;
    }
    &__textarea {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;

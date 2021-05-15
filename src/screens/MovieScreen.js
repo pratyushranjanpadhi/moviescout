@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 const MovieScreen = ({ match }) => {
    return (
       <div>
-         <Sidebar genreName="Action" />
+         <Sidebar genreName="" />
          <MovieDetails id={match.params.id} />{" "}
       </div>
    );

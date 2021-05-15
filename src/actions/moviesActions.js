@@ -31,4 +31,14 @@ const getMovieDetails = (id) => async (dispatch) => {
    } catch (error) {}
 };
 
-export { getMoviesList, getMovieDetails };
+const getMovieVideo = (id) => async (dispatch) => {
+   try {
+      dispatch({ type: "FETCH_MOVIE_VIDEO_REQUEST" });
+      const {
+         data: { results },
+      } = await axios.get(`${process.env.REACT_APP_URI}movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
+      dispatch({ type: "FETCH_MOVIE_VIDEO_SUCCESS", payload: results });
+   } catch (error) {}
+};
+
+export { getMoviesList, getMovieDetails, getMovieVideo };

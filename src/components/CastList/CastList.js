@@ -21,6 +21,7 @@ const CastList = ({ id }) => {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      initialSlide: 0,
       autoplay: true,
       autoplaySpeed: 3000,
    };
@@ -29,7 +30,7 @@ const CastList = ({ id }) => {
       return casts.map((cast) => {
          return (
             <Link className="slider__link" to={`/cast/${cast.id}`} key={cast.id}>
-               <img src={`${process.env.REACT_APP_IMAGE_URI}${cast.profile_path}`} alt="" className="slider__image" />
+               <img src={`https://image.tmdb.org/t/p/w500${cast.profile_path}`} alt="" className="slider__image" />
                <div className="slider__textarea">
                   <span className="slider__mov-name">{cast.character}</span>
                   <span className="slider__or-name">{cast.name}</span>

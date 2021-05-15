@@ -1,6 +1,7 @@
 @import "../../sass/variables";
 .details {
    margin-left: 25rem;
+   padding: 2rem 0;
    position: relative;
    &__cover {
       padding: 2rem;
@@ -143,6 +144,42 @@
       }
       &--icon {
          margin-right: 1rem;
+      }
+   }
+   &__second-wrapper {
+      margin-top: -7rem;
+      display: flex;
+   }
+   &__misc-data {
+      border-left: 1px solid grey;
+      padding: 2rem;
+      &--data-box {
+         &:not(:last-child) {
+            margin-bottom: 1.2rem;
+         }
+         h3 {
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+         }
+         p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: grey;
+         }
+      }
+   }
+   &__third-wrapper {
+      // width: 70%;
+      margin: 4rem auto 0 auto;
+      display: flex;
+      justify-content: center;
+      iframe {
+         height: 50rem;
+         width: 80%;
+         outline: 1rem solid $color-first;
+         outline-offset: 1rem;
+         box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.2);
+         // border-radius: 2rem;
       }
    }
 }
