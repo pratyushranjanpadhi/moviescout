@@ -7,6 +7,7 @@
    width: 22rem;
    height: 100vh;
    background-color: $color-first;
+   border-right: 1px solid #d5d5d5;
    color: $color-second;
    display: flex;
    flex-direction: column;
@@ -38,7 +39,7 @@
       &:hover {
          border: 1px solid $color-third;
          // transform: translateY(-0.5rem) scale(1.05);
-         color: $color-third;
+         // color: $color-fourth;
       }
 
       &:focus {

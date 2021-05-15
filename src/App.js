@@ -3,10 +3,12 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
 import MovieScreen from "./screens/MovieScreen";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
    return (
       <Router>
+         <ScrollToTop />
          <Route path="/" exact component={HomeScreen} />
          <Route path="/movie/:id" component={MovieScreen} />
          <Route path="/movies/:genre" component={HomeScreen} />

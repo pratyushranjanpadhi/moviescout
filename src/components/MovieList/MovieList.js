@@ -8,7 +8,7 @@ import { getMoviesList } from "../../actions/moviesActions";
 import Loader from "../Loader/Loader";
 import { genres } from "../../components/Sidebar/genres";
 
-const MovieList = ({ genre, movieId }) => {
+const MovieList = ({ genre, movieId, page }) => {
    const dispatch = useDispatch();
    let genreId;
 
@@ -26,12 +26,12 @@ const MovieList = ({ genre, movieId }) => {
          dispatch(getMoviesList(null, movieId));
       } else {
          if (genreId) {
-            dispatch(getMoviesList(genreId));
+            dispatch(getMoviesList(genreId, null, null, page));
          } else {
-            dispatch(getMoviesList());
+            dispatch(getMoviesList(null, null, null, page));
          }
       }
-   }, [dispatch, genreId, movieId]);
+   }, [dispatch, genreId, movieId, page]);
 
    const renderMovies = () => {
       return movies.map((movie) => {

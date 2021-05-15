@@ -1,12 +1,52 @@
 @import "../../sass/main.scss";
 
 .header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   height: 7rem;
-   width: 100vw;
-   background-color: $color-fourth;
+   margin-left: 25rem;
+   margin-right: 2rem;
+   padding: 2rem;
+
    z-index: 1;
    display: flex;
+   align-items: center;
+   border-bottom: 1px solid #d5d5d5;
+   &__btn-box {
+      margin-right: auto;
+   }
+   &__btn {
+      background: transparent;
+      border: none;
+      padding: 1rem 3.5rem;
+      color: $color-first;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:not(:last-child) {
+         margin-right: 1rem;
+      }
+      &:hover {
+         color: $color-fourth;
+      }
+   }
+   &__searchbox {
+      display: flex;
+   }
+   &__input {
+      width: 20rem;
+      outline: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      border-radius: 1rem;
+   }
+   &__search-btn {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 1rem;
+      background-color: $color-first;
+      color: $color-white;
+      cursor: pointer;
+   }
 }

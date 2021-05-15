@@ -4,12 +4,13 @@
    padding: 2rem 0;
    position: relative;
    &__cover {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
       padding: 2rem;
       width: 100%;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
       filter: blur(5px);
-      // filter: grayscale(50%);
-      // opacity: 0.5;
       img {
          width: 100%;
       }
