@@ -122,6 +122,11 @@ const MovieDetails = ({ id }) => {
                         allowfullscreen
                      ></iframe>
                   </div>
+
+                  {/* Third Wrapper Div */}
+                  <div className="details__fourth-wrapper">
+                     <h3>Recomended Movies :</h3>
+                  </div>
                </div>
             </>
          )}

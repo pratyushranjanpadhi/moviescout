@@ -22,7 +22,7 @@ const movieDetailsReducer = (state = { movie: { genres: [] } }, action) => {
    }
 };
 
-const movieVideoReducer = (state = { videos: [] }, action) => {
+const movieVideoReducer = (state = { videos: [{ key: "" }] }, action) => {
    switch (action.type) {
       case "FETCH_MOVIE_VIDEO_REQUEST":
          return { ...state, loading: true };

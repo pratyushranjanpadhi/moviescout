@@ -21,7 +21,7 @@ const CastList = ({ id }) => {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      initialSlide: 0,
+      initialSlide: -2,
       autoplay: true,
       autoplaySpeed: 3000,
    };
