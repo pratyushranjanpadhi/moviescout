@@ -6,6 +6,7 @@ import { getMovieDetails, getMovieVideo } from "../../actions/moviesActions";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 import { FaImdb, FaLink } from "react-icons/fa";
+import { FcLike } from "react-icons/fc";
 import CastList from "../CastList/CastList";
 
 const MovieDetails = ({ id }) => {
@@ -62,7 +63,9 @@ const MovieDetails = ({ id }) => {
                            />
                            <p>{movie.vote_average}</p>
                         </div>
-                        <div className="details__ratingbox">{`${movie.vote_count} reviews`}</div>
+                        <div className="details__ratingbox">
+                           {`${movie.vote_count} reviews`} <FcLike className="details__ratingbox--icon" />
+                        </div>
                      </div>
                      <div className="details__genrewrapper">{renderGenres(movie.genres)}</div>
                      <div className="details__synopsis">

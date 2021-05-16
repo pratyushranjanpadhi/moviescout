@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getMoviesList =
-   (genreId = null, movieId = null, otherListName = null, page = 1) =>
+   (genreId = null, movieId = null, otherListName = null, page = 1, searchKeyWord = null) =>
    async (dispatch) => {
       try {
          if (movieId) {
@@ -25,6 +25,14 @@ const getMoviesList =
             const {
                data: { results },
             } = await axios.get(`${process.env.REACT_APP_URI}movie/${otherListName}?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
+            dispatch({ type: "FETCH_MOVIE_LIST_SUCCESS", payload: results });
+         } else if (searchKeyWord) {
+            dispatch({ type: "FETCH_MOVIE_LIST_REQUEST" });
+            const {
+               data: { results },
+            } = await axios.get(
+               `${process.env.REACT_APP_URI}search/movie/?query=${searchKeyWord}&api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
+            );
             dispatch({ type: "FETCH_MOVIE_LIST_SUCCESS", payload: results });
          } else {
             dispatch({ type: "FETCH_MOVIE_LIST_REQUEST" });

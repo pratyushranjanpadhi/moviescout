@@ -21,7 +21,11 @@ const CastDetails = ({ id }) => {
          ) : (
             <div className="cast-details__main">
                <div className="cast-details__img-wrapper">
-                  <img src={`${process.env.REACT_APP_IMAGE_URI}${cast.profile_path}`} alt="cast-pic" className="cast-details__img" />
+                  {cast.profile_path ? (
+                     <img src={`${process.env.REACT_APP_IMAGE_URI}${cast.profile_path}`} alt="cast-pic" className="cast-details__img" />
+                  ) : (
+                     <img src="/default.png" alt="cast-pic" className="cast-details__img" />
+                  )}
                </div>
                <div className="cast-details__bio-wrapper">
                   <h2 className="cast-details__name">{cast.name}</h2>
