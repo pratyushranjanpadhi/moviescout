@@ -182,6 +182,9 @@
          box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.2);
          // border-radius: 2rem;
       }
+      &--fallback {
+         color: red;
+      }
    }
 
    &__fourth-wrapper {

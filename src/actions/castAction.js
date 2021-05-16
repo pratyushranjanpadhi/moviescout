@@ -11,4 +11,12 @@ const getCastList = (id) => async (dispatch) => {
    } catch (error) {}
 };
 
-export { getCastList };
+const getCastDetails = (id) => async (dispatch) => {
+   try {
+      dispatch({ type: "FETCH_CAST_DETAILS_REQUEST" });
+      const { data } = await axios.get(`${process.env.REACT_APP_URI}person/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
+      dispatch({ type: "FETCH_CAST_DETAILS_SUCCESS", payload: data });
+   } catch (error) {}
+};
+
+export { getCastList, getCastDetails };

@@ -114,13 +114,19 @@ const MovieDetails = ({ id }) => {
 
                   {/* Third Wrapper Div */}
                   <div className="details__third-wrapper">
-                     <iframe
-                        src={`https://www.youtube.com/embed/${videos[0].key}/`}
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                     ></iframe>
+                     {videos[0] ? (
+                        <iframe
+                           src={`https://www.youtube.com/embed/${videos[0].key}/`}
+                           title="YouTube video player"
+                           frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                           allowfullscreen
+                        ></iframe>
+                     ) : (
+                        <div className="details__third-wrapper--fallback">
+                           <h2>No Videos Found</h2>
+                        </div>
+                     )}
                   </div>
 
                   {/* Third Wrapper Div */}
