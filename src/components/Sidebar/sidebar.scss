@@ -12,6 +12,22 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   @include respond(tab-port) {
+      display: none;
+   }
+
+   &__btn {
+      position: relative;
+      top: 0;
+      left: 12rem;
+      height: 3rem;
+      width: 3rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      color: $color-first;
+   }
    &__logo {
       display: flex;
       justify-content: center;
@@ -64,4 +80,8 @@
 .active {
    border: 1px solid $color-third;
    border-radius: 1000rem;
+}
+
+.toggle-active {
+   width: 0;
 }

@@ -13,6 +13,10 @@
       display: flex;
       align-items: center;
    }
+
+   @include respond(tab-port) {
+      margin: 0 5rem;
+   }
    // &__btn-wrapper {
    //    display: flex;
    //    align-items: center;
@@ -44,6 +48,10 @@
          font-size: 1.6rem;
          margin-right: 0.5rem;
       }
+      @include respond(tab-port) {
+         padding: 0.5rem 1.5rem;
+         font-size: 1rem;
+      }
    }
    &__searchbox {
       display: flex;
@@ -62,6 +70,10 @@
       &:focus {
          width: 23rem;
       }
+      @include respond(tab-port) {
+         padding: 0.5rem 1.5rem;
+         font-size: 1rem;
+      }
       // margin-right: 1rem;
       // border: none;
    }
@@ -77,5 +89,10 @@
       outline: none;
       border: 1px solid $color-third;
       border-left: none;
+
+      @include respond(tab-port) {
+         padding: 0.5rem 1.5rem;
+         font-size: 1rem;
+      }
    }
 }

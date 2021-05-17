@@ -5,7 +5,9 @@
    justify-content: space-around;
    flex-wrap: wrap;
    margin-left: 25rem;
-   margin-top: 2rem;
+   @include respond(tab-port) {
+      margin: 0 5rem;
+   }
 }
 .container {
    display: flex;

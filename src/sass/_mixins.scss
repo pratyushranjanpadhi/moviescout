@@ -1,0 +1,34 @@
+/*
+Media query manager 
+0 - 600px : Phone ----------------------------> phone
+600 - 900px : Tablet portrait ----------------> tab-port
+900 - 1200px : Tablet Landscape --------------> tab-land
+1200 - 1800px : Normal CSS -------------------> 
+1800 + : Big desktop -------------------------> big-desktop
+ORDER : Base - typography -  general layout - grid layout - page layout - component
+*/
+@mixin respond($pointbreak) {
+   @if $pointbreak == phone {
+      @media only screen and (max-width: 37.5em) {
+         @content;
+      }
+   }
+
+   @if $pointbreak == tab-port {
+      @media only screen and (max-width: 56.25em) {
+         @content;
+      }
+   }
+
+   @if $pointbreak == tab-land {
+      @media only screen and (max-width: 75em) {
+         @content;
+      }
+   }
+
+   @if $pointbreak == big-desktop {
+      @media only screen and (min-width: 112.5em) {
+         @content;
+      }
+   }
+}

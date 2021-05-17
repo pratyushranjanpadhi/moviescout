@@ -11,13 +11,6 @@ import { Link } from "react-router-dom";
 const Header = () => {
    const [inputValue, setInputValue] = useState("");
    const dispatch = useDispatch();
-   // const clickHandler = (otherListName) => {
-   //    if (otherListName) {
-   //       dispatch(getMoviesList(null, null, otherListName));
-   //    } else {
-   //       dispatch(getMoviesList());
-   //    }
-   // };
 
    const changeHandler = (e) => {
       setInputValue(e.target.value);
@@ -30,7 +23,7 @@ const Header = () => {
    };
 
    return (
-      <div className="header">
+      <div className="header mb-small">
          <div className="header__btn-box">
             <Link to="/" className="header__btn">
                <FaHome className="header__btn--icon" />

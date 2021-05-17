@@ -19,7 +19,7 @@ const Sidebar = ({ genreName }) => {
    return (
       <div className="sidebar">
          <Link to="/" className="sidebar__logo">
-            <img src="/logo.png" alt="" />
+            <img src="/logo.png" alt="logo-pic" />
          </Link>
          <h3 className="sidebar__heading">Genres</h3>
          {renderGenres()}

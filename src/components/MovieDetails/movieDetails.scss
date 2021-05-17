@@ -1,12 +1,16 @@
-@import "../../sass/variables";
+@import "../../sass/main.scss";
 .details {
    margin-left: 25rem;
    padding: 2rem 0;
    position: relative;
+   @include respond(tab-port) {
+      margin: 0 5rem;
+   }
    &__cover {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
       padding: 2rem;
       width: 100%;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
@@ -14,26 +18,58 @@
       img {
          width: 100%;
       }
+      @include respond(tab-land) {
+         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 85%);
+      }
+      @include respond(tab-port) {
+         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%);
+      }
+   }
+   &__first-wrapper {
+      display: flex;
+      padding: 5rem 10rem;
+
+      // @media screen and (max-width: 130rem) {
+      //    padding: 1rem 3rem;
+      //    margin: 2rem 0;
+      // }
+
+      @include respond(tab-port) {
+         margin-bottom: 4rem;
+      }
+   }
+   &__img-wrapper {
+      margin-right: 3rem;
+      padding: 3rem;
+      @include respond(tab-land) {
+         margin-right: 1rem;
+      }
+      @include respond(tab-port) {
+         padding: 1rem;
+      }
    }
    &__poster {
-      position: absolute;
-      top: 10rem;
-      left: 10rem;
       height: 40rem;
       z-index: 1;
       border: 2px solid $color-white;
       border-radius: 1rem;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      @include respond(tab-land) {
+         height: 35rem;
+      }
+      @include respond(tab-port) {
+         height: 30rem;
+      }
    }
    &__heading-wraper {
-      position: absolute;
-      top: 6rem;
-      left: 40rem;
       padding: 3rem;
+      @include respond(tab-land) {
+         padding: 1rem;
+      }
    }
    &__heading {
-      font-size: 5.5rem;
+      font-size: 4.5rem;
       font-weight: 300;
       letter-spacing: 1px;
       color: $color-white;
@@ -41,6 +77,12 @@
       span {
          font-weight: 100;
          letter-spacing: normal;
+      }
+      @include respond(tab-land) {
+         font-size: 3.5rem;
+      }
+      @include respond(tab-port) {
+         font-size: 2.5rem;
       }
    }
    &__tagline {
@@ -52,11 +94,22 @@
       margin-top: 0.5rem;
       margin-left: 0.5rem;
       text-shadow: 0rem 1rem 2rem rgba($color-black, 0.7);
+      @include respond(tab-port) {
+         font-size: 1rem;
+         font-weight: 700;
+         letter-spacing: normal;
+      }
    }
    &__rating-wrapper {
       display: flex;
       align-items: center;
       margin-top: 4rem;
+      @include respond(tab-land) {
+         margin-top: 2.5rem;
+      }
+      @include respond(tab-port) {
+         margin-top: 1.5rem;
+      }
    }
    &__starbox {
       display: flex;
@@ -69,6 +122,9 @@
          color: $color-white;
          padding: 1rem;
          font-weight: 700;
+      }
+      @include respond(tab-port) {
+         margin-right: 2rem;
       }
    }
    &__ratingbox {
@@ -86,6 +142,9 @@
       margin-top: 3rem;
       display: flex;
       align-items: center;
+      @include respond(tab-port) {
+         margin-top: 1.8rem;
+      }
    }
    &__genrebox {
       height: 3rem;
@@ -114,6 +173,16 @@
          font-size: 1.6rem;
          font-weight: 700;
          margin-bottom: 1rem;
+      }
+      @include respond(tab-land) {
+         width: 100%;
+         font-size: 1rem;
+         h3 {
+            font-size: 1.2rem;
+         }
+      }
+      @include respond(tab-port) {
+         font-size: 0.8rem;
       }
    }
    &__linkbox {
@@ -152,7 +221,7 @@
       }
    }
    &__second-wrapper {
-      margin-top: -7rem;
+      // margin-top: -7rem;
       display: flex;
    }
    &__misc-data {
@@ -175,7 +244,7 @@
    }
    &__third-wrapper {
       // width: 70%;
-      margin: 4rem auto;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       iframe {
@@ -193,9 +262,7 @@
 
    &__fourth-wrapper {
       border-top: 1px solid #d5d5d5;
-      margin-top: 8rem;
       padding: 2rem;
-      padding-bottom: 0;
       text-shadow: 0rem 0.5rem 0.5rem rgba($color-black, 0.2);
       h3 {
          font-size: 2.5rem;
