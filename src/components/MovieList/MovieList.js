@@ -8,7 +8,7 @@ import { getMoviesList } from "../../actions/moviesActions";
 import Loader from "../Loader/Loader";
 import { genres } from "../../components/Sidebar/genres";
 
-const MovieList = ({ genre, movieId, page }) => {
+const MovieList = ({ genre, movieId, page, filteredKeyword }) => {
    const dispatch = useDispatch();
    let genreId;
 
@@ -19,19 +19,18 @@ const MovieList = ({ genre, movieId, page }) => {
 
    const movieList = useSelector((state) => state.movieList);
    const { movies, loading } = movieList;
-   console.log(movies);
 
    useEffect(() => {
       if (movieId) {
          dispatch(getMoviesList(null, movieId));
+      } else if (genreId) {
+         dispatch(getMoviesList(genreId, null, null, page));
+      } else if (filteredKeyword) {
+         dispatch(getMoviesList(null, null, filteredKeyword, page));
       } else {
-         if (genreId) {
-            dispatch(getMoviesList(genreId, null, null, page));
-         } else {
-            dispatch(getMoviesList(null, null, null, page));
-         }
+         dispatch(getMoviesList(null, null, null, page));
       }
-   }, [dispatch, genreId, movieId, page]);
+   }, [dispatch, genreId, movieId, page, filteredKeyword]);
 
    const renderMovies = () => {
       return movies.map((movie) => {

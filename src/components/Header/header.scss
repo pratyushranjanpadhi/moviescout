@@ -10,11 +10,18 @@
    border-bottom: 1px solid #d5d5d5;
    &__btn-box {
       margin-right: auto;
+      display: flex;
+      align-items: center;
    }
+   // &__btn-wrapper {
+   //    display: flex;
+   //    align-items: center;
+   // }
    &__btn {
       background: transparent;
-      border: none;
-      padding: 1rem 3.5rem;
+      border: 1px solid $color-first;
+      padding: 1rem 2.5rem;
+      background-color: $color-first;
       color: $color-third;
       font-weight: 700;
       font-size: 1.2rem;
@@ -22,13 +29,16 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.2s;
-      // display: flex;
-      // align-items: center;
+      display: flex;
+      align-items: center;
+      border-radius: 1rem;
       &:not(:last-child) {
          margin-right: 1rem;
       }
       &:hover {
          color: $color-first;
+         background-color: transparent;
+         // border: 1px solid $color-first;
       }
       &--icon {
          font-size: 1.6rem;
@@ -48,6 +58,10 @@
       font-size: 1.2rem;
       border-bottom-left-radius: 1rem;
       border-top-left-radius: 1rem;
+      transition: all 0.2s;
+      &:focus {
+         width: 23rem;
+      }
       // margin-right: 1rem;
       // border: none;
    }

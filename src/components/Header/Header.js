@@ -6,17 +6,18 @@ import { FaHome, FaSearch } from "react-icons/fa";
 import { GiRank3 } from "react-icons/gi";
 
 import "./header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
    const [inputValue, setInputValue] = useState("");
    const dispatch = useDispatch();
-   const clickHandler = (otherListName) => {
-      if (otherListName) {
-         dispatch(getMoviesList(null, null, otherListName));
-      } else {
-         dispatch(getMoviesList());
-      }
-   };
+   // const clickHandler = (otherListName) => {
+   //    if (otherListName) {
+   //       dispatch(getMoviesList(null, null, otherListName));
+   //    } else {
+   //       dispatch(getMoviesList());
+   //    }
+   // };
 
    const changeHandler = (e) => {
       setInputValue(e.target.value);
@@ -31,19 +32,24 @@ const Header = () => {
    return (
       <div className="header">
          <div className="header__btn-box">
-            <button onClick={() => clickHandler()} className="header__btn">
+            <Link to="/" className="header__btn">
                <FaHome className="header__btn--icon" />
-            </button>
-            <button onClick={() => clickHandler("now_playing")} className="header__btn">
+            </Link>
+
+            <Link to="/now_playing" className="header__btn">
                <BsFillCollectionPlayFill className="header__btn--icon" />
                <span>Now Playing</span>
-            </button>
-            <button onClick={() => clickHandler("top_rated")} className="header__btn">
-               <GiRank3 className="header__btn--icon" /> <span>Top Rated</span>
-            </button>
-            <button onClick={() => clickHandler("upcoming")} className="header__btn">
-               <BsCalendar className="header__btn--icon" /> <span>Upcoming</span>
-            </button>
+            </Link>
+
+            <Link to="/top_rated" className="header__btn">
+               <GiRank3 className="header__btn--icon" />
+               <span>Top Rated</span>
+            </Link>
+
+            <Link to="/upcoming" className="header__btn">
+               <BsCalendar className="header__btn--icon" />
+               <span>Upcoming</span>
+            </Link>
          </div>
 
          <div className="header__searchbox">

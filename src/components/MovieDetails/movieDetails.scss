@@ -135,6 +135,7 @@
          font-weight: 700;
          text-decoration: none;
          margin-right: 3rem;
+         border: 1px solid $color-first;
          border-radius: 10rem;
          transition: all 0.2s;
          box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.2);
@@ -143,6 +144,8 @@
       &:hover {
          box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.6);
          transform: translateY(-0.1rem);
+         background-color: $color-white;
+         color: $color-first;
       }
       &--icon {
          margin-right: 1rem;

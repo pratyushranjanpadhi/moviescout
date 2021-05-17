@@ -1,16 +1,16 @@
 import React from "react";
-import CastDetails from "../components/CastDetails/CastDetails";
 import Header from "../components/Header/Header";
+import MovieList from "../components/MovieList/MovieList";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-const CastScreen = ({ match }) => {
+const FilteredListScreen = ({ match }) => {
    return (
       <>
          <Header />
          <Sidebar />
-         <CastDetails id={match.params.id} />
+         <MovieList filteredKeyword={match.params.filteredKeyword} />
       </>
    );
 };
 
-export default CastScreen;
+export default FilteredListScreen;
