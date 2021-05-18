@@ -18,7 +18,7 @@ const Pagination = ({ pageChange }) => {
    };
 
    return (
-      <div className="pagination">
+      <div className="pagination mb-medium">
          <button onClick={onPrev} className="pagination__btn">
             Prev
          </button>

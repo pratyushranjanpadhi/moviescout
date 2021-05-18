@@ -40,7 +40,7 @@ const MovieDetails = ({ id }) => {
             <>
                <div className="details">
                   <div className="details__cover">
-                     <img src={`${process.env.REACT_APP_IMAGE_URI}${movie.backdrop_path}`} alt="cover-pic" />
+                     <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="cover-pic" />
                   </div>
 
                   {/* First Wrapper Div */}

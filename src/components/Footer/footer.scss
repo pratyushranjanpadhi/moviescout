@@ -1,0 +1,66 @@
+@import "../../sass/main.scss";
+
+.footer {
+   background-color: $color-first;
+   padding: 3rem;
+   margin-left: 22rem;
+   @include respond(tab-port) {
+      margin: 0;
+   }
+}
+
+.f-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 60%;
+   margin: 0 auto;
+   &__img-wrapper {
+      display: flex;
+      align-items: center;
+   }
+   &__logo {
+      height: 5rem;
+      margin-right: 5rem;
+   }
+   &__source {
+      text-decoration: none;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      color: $color-third;
+      transition: all 0.2s;
+      span {
+         font-size: 1.6rem;
+         margin-right: 1rem;
+      }
+      &:hover {
+         color: $color-second;
+      }
+   }
+   &__git {
+      height: 3rem;
+      width: 3rem;
+   }
+
+   h3 {
+      font-size: 1.4rem;
+      color: $color-third;
+      font-weight: 300;
+      &:not(:last-child) {
+         margin-bottom: 1.5rem;
+         color: grey;
+      }
+      a {
+         padding: 0.5rem 1rem;
+         text-decoration: none;
+         transition: all 0.2s;
+         font-weight: 700;
+         color: $color-white;
+         &:hover {
+            transform: scale(1.02);
+            color: $color-second;
+         }
+      }
+   }
+}
