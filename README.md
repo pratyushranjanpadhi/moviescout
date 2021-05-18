@@ -6,11 +6,11 @@
 
 A movie database app built with react and redux using tmdb api. This is a personal project
 
-![homepage](./image/image-1.jpg)
+![homepage](./images/image-1.jpg)
 
-![moviepage](./image/image-2.jpg)
+![moviepage](./images/image-2.jpg)
 
-![castpage](./image/image-3.jpg)
+![castpage](./images/image-3.jpg)
 
 ### Things you should have
 
@@ -18,10 +18,13 @@ As this project is made with tmdb api, you have to have an api key which you can
 
 ## How to get started
 
-> $ git clone ["git id"]
-> $ cd moviescout
-> $ npm install
-> setup the environment variables (listed below)
+```
+$ git clone ["git id"]
+$ cd moviescout
+$ npm install
+setup the environment variables (listed below)
+
+```
 
 ## Environment variables
 
