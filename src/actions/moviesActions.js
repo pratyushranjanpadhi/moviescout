@@ -1,4 +1,5 @@
 import axios from "axios";
+import tmdbAPI from "../api/tmdb";
 
 const getMoviesList =
    (genreId = null, movieId = null, otherListName = null, page = 1, searchKeyWord = null) =>
@@ -30,9 +31,7 @@ const getMoviesList =
             dispatch({ type: "FETCH_MOVIE_LIST_REQUEST" });
             const {
                data: { results },
-            } = await axios.get(
-               `${process.env.REACT_APP_URI}search/movie/?query=${searchKeyWord}&api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
-            );
+            } = await tmdbAPI.get(`/search/movie?query=${searchKeyWord}&page=${page}`);
             dispatch({ type: "FETCH_MOVIE_LIST_SUCCESS", payload: results });
          } else {
             dispatch({ type: "FETCH_MOVIE_LIST_REQUEST" });
