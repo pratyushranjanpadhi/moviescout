@@ -19,6 +19,10 @@ html {
    @include respond(tab-port) {
       font-size: 50%; //8px = 1rem : 8/16 = 50%
    }
+
+   @media screen and (min-width: 1800px) {
+      font-size: 75%;
+   }
 }
 
 // body {
