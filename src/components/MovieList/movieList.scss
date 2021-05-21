@@ -22,6 +22,8 @@
       transform: translateY(-0.5rem) scale(1.01);
       box-shadow: 0 1rem 3rem rgba($color-black, 0.6);
    }
+   // For the Movie Cards displayed to be "rounded"
+   overflow: hidden
 }
 
 .image {
