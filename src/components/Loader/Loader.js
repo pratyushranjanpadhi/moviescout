@@ -9,6 +9,7 @@ const override = css`
    justify-content: center;
    align-items: center;
    transform: translate(-10rem, -10rem);
+   margin-left: 22rem; // 22rem is the width of the sidebar, so it's not responsive
 `;
 
 const Loader = () => {
