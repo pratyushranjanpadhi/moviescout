@@ -1,41 +1,41 @@
-@import "../../sass/main.scss";
+@import '../../sass/main.scss';
 
 .main-list {
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   margin-left: 25rem;
-   @include respond(tab-port) {
-      margin: 0 5rem;
-   }
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 25rem;
+  @include respond(tab-port) {
+    margin: 0 5rem;
+  }
 }
+
 .container {
-   display: flex;
-   flex-direction: column;
-   width: 23rem;
-   margin: 2rem;
-   border-radius: 2rem;
-   text-decoration: none;
-   transition: all 0.2s;
-   box-shadow: 0 0.5rem 1.5rem rgba($color-black, 0.3);
-   &:hover {
-      transform: translateY(-0.5rem) scale(1.01);
-      box-shadow: 0 1rem 3rem rgba($color-black, 0.6);
-   }
-   // For the Movie Cards displayed to be "rounded"
-   overflow: hidden
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1.5rem rgba($color-black, 0.3);
+  &:hover {
+    transform: translateY(-0.5rem) scale(1.01);
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.6);
+  }
+  overflow: hidden;
 }
 
 .image {
-   img {
-      width: 100%;
-   }
+  img {
+    width: 100%;
+  }
 }
 
 .title {
-   padding: 1.5rem;
-   text-align: center;
-   font-size: 0.8rem;
-   font-weight: 100;
-   color: $color-first;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: $color-first;
 }

@@ -1,87 +1,78 @@
-@import "../../sass/main.scss";
+@import '../../sass/main.scss';
 
 .sidebar {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 22rem;
-   height: 100vh;
-   background-color: $color-first;
-   border-right: 1px solid #d5d5d5;
-   color: $color-third;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-
-   @include respond(tab-port) {
-      display: none;
-   }
-
-   &__btn {
-      position: relative;
-      top: 0;
-      left: 12rem;
-      height: 3rem;
-      width: 3rem;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      color: $color-first;
-   }
-   &__logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      // border-bottom: 0.5px solid $color-third;
-      img {
-         width: 15rem;
-      }
-   }
-   &__inside {
-      width: 70%;
-      font-size: 1.2rem;
-      font-weight: 700;
-      text-align: left;
-      text-decoration: none;
-      padding: 0.7rem 1.2rem;
-      padding-left: 3rem;
-      cursor: pointer;
-      color: $color-third;
-      background-color: transparent;
-      border: 1px solid transparent;
-      border-radius: 1000rem;
-      transition: all 0.1s;
-      display: flex;
-      align-items: center;
-      &:hover {
-         border: 1px solid $color-third;
-         // transform: translateY(-0.5rem) scale(1.05);
-         // color: $color-fourth;
-      }
-
-      &:focus {
-         border: none;
-      }
-      &--icon {
-         margin-right: 1rem;
-      }
-   }
-   &__heading {
-      align-self: flex-start;
-      margin-left: 4rem;
-      padding: 1rem 0;
-      color: $color-third;
-      text-transform: uppercase;
-      font-weight: 700;
-   }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22rem;
+  height: 100vh;
+  background-color: $color-first;
+  border-right: 1px solid #d5d5d5;
+  color: $color-third;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include respond(tab-port) {
+    display: none;
+  }
+  &__btn {
+    position: relative;
+    top: 0;
+    left: 12rem;
+    height: 3rem;
+    width: 3rem;
+    color: $color-first;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: 15rem;
+    }
+  }
+  &__inside {
+    width: 70%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    padding-left: 3rem;
+    cursor: pointer;
+    color: $color-third;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 1000rem;
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    &:hover {
+      border: 1px solid $color-third;
+    }
+    &:focus {
+      border: none;
+    }
+    &--icon {
+      margin-right: 1rem;
+    }
+  }
+  &__heading {
+    align-self: flex-start;
+    margin-left: 4rem;
+    padding: 1rem 0;
+    color: $color-third;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
 
 .active {
-   border: 1px solid $color-third;
-   border-radius: 1000rem;
+  border: 1px solid $color-third;
+  border-radius: 1000rem;
 }
 
 .toggle-active {
-   width: 0;
+  width: 0;
 }

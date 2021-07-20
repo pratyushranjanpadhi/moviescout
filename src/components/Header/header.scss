@@ -1,102 +1,93 @@
-@import "../../sass/main.scss";
+@import '../../sass/main.scss';
 
 .header {
-   margin-left: 25rem;
-   margin-right: 2rem;
-   padding: 2rem;
+  margin-left: 25rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5d5d5;
+  &__btn-box {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
 
-   display: flex;
-   align-items: center;
-   border-bottom: 1px solid #d5d5d5;
-   &__btn-box {
-      margin-right: auto;
-      display: flex;
-      align-items: center;
-   }
+  @include respond(tab-port) {
+    margin: 0 5rem;
+  }
+  &__btn {
+    background: transparent;
+    border: 1px solid $color-first;
+    padding: 1rem 2.5rem;
+    background-color: $color-first;
+    color: $color-third;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &:hover {
+      color: $color-first;
+      background-color: transparent;
+    }
+    &--icon {
+      font-size: 1.6rem;
+      margin-right: 0.5rem;
+    }
+    @include respond(tab-port) {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  &__searchbox {
+    display: flex;
+  }
+  &__input {
+    width: 20rem;
+    outline: none;
+    border: 1px solid $color-third;
+    border-right: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    transition: all 0.2s;
+    &:focus {
+      width: 23rem;
+    }
+    @include respond(tab-port) {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
 
-   @include respond(tab-port) {
-      margin: 0 5rem;
-   }
-   // &__btn-wrapper {
-   //    display: flex;
-   //    align-items: center;
-   // }
-   &__btn {
-      background: transparent;
-      border: 1px solid $color-first;
-      padding: 1rem 2.5rem;
-      background-color: $color-first;
-      color: $color-third;
-      font-weight: 700;
-      font-size: 1.2rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      border-radius: 1rem;
-      &:not(:last-child) {
-         margin-right: 1rem;
-      }
-      &:hover {
-         color: $color-first;
-         background-color: transparent;
-         // border: 1px solid $color-first;
-      }
-      &--icon {
-         font-size: 1.6rem;
-         margin-right: 0.5rem;
-      }
-      @include respond(tab-port) {
-         padding: 0.5rem 1.5rem;
-         font-size: 1rem;
-      }
-   }
-   &__searchbox {
-      display: flex;
-      // border-radius: 1rem;
-   }
-   &__input {
-      width: 20rem;
-      outline: none;
-      border: 1px solid $color-third;
-      border-right: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-bottom-left-radius: 1rem;
-      border-top-left-radius: 1rem;
-      transition: all 0.2s;
-      &:focus {
-         width: 23rem;
-      }
-      @include respond(tab-port) {
-         padding: 0.5rem 1.5rem;
-         font-size: 1rem;
-      }
+    @media screen and (min-width: 1800px) {
+      width: 30rem;
+    }
+  }
+  &__search-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: $color-third;
+    color: $color-white;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid $color-third;
+    border-left: none;
 
-      @media screen and (min-width: 1800px) {
-         width: 30rem;
-      }
-      // margin-right: 1rem;
-      // border: none;
-   }
-   &__search-btn {
-      padding: 1rem 1.5rem;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border-bottom-right-radius: 1rem;
-      border-top-right-radius: 1rem;
-      background-color: $color-third;
-      color: $color-white;
-      cursor: pointer;
-      outline: none;
-      border: 1px solid $color-third;
-      border-left: none;
-
-      @include respond(tab-port) {
-         padding: 0.5rem 1.5rem;
-         font-size: 1rem;
-      }
-   }
+    @include respond(tab-port) {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
 }
