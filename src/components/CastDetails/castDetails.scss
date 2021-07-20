@@ -1,89 +1,84 @@
-@import "../../sass/main.scss";
+@import '../../sass/main.scss';
 .cast-details {
-   margin-left: 25rem;
-   padding: 5rem 3rem;
-   @include respond(tab-port) {
-      margin: 0 5rem;
-   }
-
-   &__main {
-      display: flex;
-      width: 80%;
-      margin: 5rem auto;
-   }
-   &__img-wrapper {
-      margin-right: 10rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   &__img {
-      // height: 50rem;
-      width: 35rem;
-      border-radius: 1rem;
-      box-shadow: 0rem 0rem 2rem rgba($color-black, 0.5);
-      @include respond(tab-land) {
-         width: 30rem;
-      }
-   }
-   &__name {
-      font-size: 3.5rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      @include respond(tab-land) {
-         font-size: 3rem;
-         margin-bottom: 1.5rem;
-      }
-   }
-   &__born,
-   &__place {
-      font-size: 1.5rem;
+  margin-left: 25rem;
+  padding: 5rem 3rem;
+  @include respond(tab-port) {
+    margin: 0 5rem;
+  }
+  &__main {
+    display: flex;
+    width: 80%;
+    margin: 5rem auto;
+  }
+  &__img-wrapper {
+    margin-right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    width: 35rem;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 2rem rgba($color-black, 0.5);
+    @include respond(tab-land) {
+      width: 30rem;
+    }
+  }
+  &__name {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    @include respond(tab-land) {
+      font-size: 3rem;
       margin-bottom: 1.5rem;
-      span {
-         font-weight: 300;
-      }
-   }
-
-   &__bio-heading {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      margin-top: 3rem;
-   }
-   &__biography {
-      font-size: 1.4rem;
-      @include respond(tab-land) {
-         font-size: 1.2rem;
-      }
-      //   font-weight: 00;
-   }
-   &__imdblink {
-      margin-top: 2.5rem;
-      display: flex;
-      align-items: center;
-      width: 12rem;
-      &:link,
-      &:active {
-         padding: 1.2rem 3.5rem;
-         background-color: $color-first;
-         color: $color-third;
-         font-size: 1.2rem;
-         font-weight: 700;
-         text-decoration: none;
-         margin-right: 3rem;
-         border-radius: 10rem;
-         border: 1px solid $color-first;
-         transition: all 0.2s;
-         box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.2);
-      }
-
-      &:hover {
-         box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.6);
-         transform: translateY(-0.1rem);
-         color: $color-first;
-         background-color: $color-white;
-      }
-      &--icon {
-         margin-right: 1rem;
-      }
-   }
+    }
+  }
+  &__born,
+  &__place {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    span {
+      font-weight: 300;
+    }
+  }
+  &__bio-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+  &__biography {
+    font-size: 1.4rem;
+    @include respond(tab-land) {
+      font-size: 1.2rem;
+    }
+  }
+  &__imdblink {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    width: 12rem;
+    &:link,
+    &:active {
+      padding: 1.2rem 3.5rem;
+      background-color: $color-first;
+      color: $color-third;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-right: 3rem;
+      border-radius: 10rem;
+      border: 1px solid $color-first;
+      transition: all 0.2s;
+      box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.2);
+    }
+    &:hover {
+      box-shadow: 0rem 1rem 1.5rem rgba($color-black, 0.6);
+      transform: translateY(-0.1rem);
+      color: $color-first;
+      background-color: $color-white;
+    }
+    &--icon {
+      margin-right: 1rem;
+    }
+  }
 }
